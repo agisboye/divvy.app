@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./index.html",
+        download: "./download.html",
         privacy: "./privacy.html",
         terms: "./terms.html"
       }
