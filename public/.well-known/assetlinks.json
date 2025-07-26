@@ -1,0 +1,26 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.totus_labs.divvy",
+      "sha256_cert_fingerprints": [
+        "F5:B7:0B:10:E6:01:57:D2:A5:BC:A1:95:4F:3C:4D:B4:E9:29:8E:11:05:58:C3:7C:64:BC:7B:30:E4:5C:C1:EC"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.totus_labs.divvy.debug",
+      "sha256_cert_fingerprints": [
+        "BC:86:ED:E5:47:9A:B8:CB:C7:19:2F:21:5B:CE:56:1E:E2:F3:3A:B2:B5:69:2C:85:13:F5:12:2A:60:30:1D:82"
+      ]
+    }
+  }
+]

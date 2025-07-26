@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="images/app-icon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divvy | Split when you're together</title>
+  <meta name="description" content="Divvy is the easiest way to share expenses with friends." />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav
+    class="fixed top-4 left-4 right-4 max-w-7xl mx-auto bg-white/80 backdrop-blur-md z-50 rounded-2xl shadow-lg border border-white/20">
+    <div class="px-2 sm:px-4 lg:px-6">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <img src="images/app-icon.svg" alt="Divvy" class="h-8 w-8" />
+          <div class="font-bold text-xl text-gray-900">Divvy</div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#problem"
+            class="text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">How
+            it Works</a>
+          <a href="#features"
+            class="text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">Features</a>
+          <a href="#use-cases"
+            class="text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">Use
+            Cases</a>
+          <a href="#download"
+            class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-all duration-200 font-medium ml-2 shadow-sm hover:shadow-md">Download</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" id="mobile-menu-button"
+            class="text-gray-600 hover:text-gray-900 p-2 rounded-lg hover:bg-gray-50 transition-all duration-200"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Hamburger icon -->
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="border-t border-gray-200 pt-4 pb-3 space-y-1">
+          <a href="#problem"
+            class="block text-gray-600 hover:text-gray-900 px-4 py-3 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">
+            How it Works
+          </a>
+          <a href="#features"
+            class="block text-gray-600 hover:text-gray-900 px-4 py-3 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">
+            Features
+          </a>
+          <a href="#use-cases"
+            class="block text-gray-600 hover:text-gray-900 px-4 py-3 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium">
+            Use Cases
+          </a>
+          <a href="#download"
+            class="block bg-primary text-white px-4 py-3 rounded-lg hover:bg-primary-dark transition-all duration-200 font-medium mt-2">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-primary-light/20 to-primary-light/40 min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Text Content -->
+        <div>
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Split when you're together
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 mb-8">
+            Divvy helps you share expenses with others, no matter the occasion.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <a href="#download"
+              class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-dark transition-colors">
+              Get the app
+            </a>
+            <a href="#problem"
+              class="border border-primary/30 text-primary-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-light/10 transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column - Preview/Screenshot -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="w-full max-w-md">
+            <img src="public/images/app-groups.webp" alt="Divvy app showing group expense management"
+              class="w-full h-auto rounded-2xl shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem/Solution Section -->
+  <section id="problem" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Problem -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            It doesn't have to be like this
+          </h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <span class="text-2xl">🧮</span>
+              <p class="text-lg text-gray-600">Complicated math and splitting bills</p>
+            </div>
+            <div class="flex items-start space-x-4">
+              <span class="text-2xl">😬</span>
+              <p class="text-lg text-gray-600">Awkward conversations about money</p>
+            </div>
+            <div class="flex items-start space-x-4">
+              <span class="text-2xl">🤔</span>
+              <p class="text-lg text-gray-600">Forgetting who owes what</p>
+            </div>
+            <div class="flex items-start space-x-4">
+              <span class="text-2xl">💸</span>
+              <p class="text-lg text-gray-600">Friends who "forget" to pay back</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            How Divvy does it
+          </h2>
+          <div class="space-y-8">
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                1
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Create a group & invite friends</h3>
+                <p class="text-gray-600">Make it personal with a group photo.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                2
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Anyone can add expenses</h3>
+                <p class="text-gray-600">Split evenly or assign amounts.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                3
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Use Smart Settle</h3>
+                <p class="text-gray-600">Everyone settles with as few payments as possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything you need to split expenses</h2>
+        <p class="text-xl text-gray-600">Powerful features to help you focus on experiences, not expenses</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Currency Conversion -->
+        <div class="rounded-2xl p-8 text-white"
+          style="background: linear-gradient(to bottom right, #21C070, #50F39E); text-shadow: 0px 1px 1px rgba(23, 110, 63, 0.5)">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-white/60 rounded-xl flex items-center justify-center text-2xl">
+              💱
+            </div>
+            <h3 class="text-2xl font-bold ml-4">All currencies welcome</h3>
+          </div>
+          <p class="text-lg leading-relaxed mb-6">
+            Traveling abroad? No problem. Divvy automatically converts currencies.
+          </p>
+          <div class="bg-white/10 rounded-xl overflow-hidden">
+            <video autoplay muted loop playsinline class="w-full h-auto" poster="images/currency-conversion-poster.png">
+              <source src="videos/currency-conversion.mov" type="video/quicktime">
+              <source src="videos/currency-conversion.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Change Splits -->
+        <div class="rounded-2xl p-8 text-white"
+          style="background: linear-gradient(to bottom right, #176E3F, #26D97A); text-shadow: 0px 1px 1px rgba(23, 110, 63, 0.5)">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-white/60 rounded-xl flex items-center justify-center text-2xl">
+              ⚖️
+            </div>
+            <h3 class="text-2xl font-bold ml-4">Split as you see fit</h3>
+          </div>
+          <p class="text-lg leading-relaxed mb-6">
+            Not everything splits evenly. Adjust amounts, exclude people, or split by percentage. Make it fair for
+            everyone involved.
+          </p>
+          <div class="bg-white/10 rounded-xl overflow-hidden">
+            <video autoplay muted loop playsinline class="w-full h-auto" poster="images/expense-split-poster.png">
+              <source src="videos/expense-split.mov" type="video/quicktime">
+              <source src="videos/expense-split.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Photo Receipts -->
+        <div class="rounded-2xl p-8 text-white"
+          style="background: linear-gradient(to bottom right, #21C070, #176E3F); text-shadow: 0px 1px 1px rgba(23, 110, 63, 0.5)">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-white/60 rounded-xl flex items-center justify-center text-2xl">
+              📸
+            </div>
+            <h3 class="text-2xl font-bold ml-4">Keep your receipt</h3>
+          </div>
+          <p class="text-green-100 text-lg leading-relaxed">
+            Snap a photo of your receipt and attach it to any expense. Never lose track of what you spent money on.
+          </p>
+        </div>
+
+        <!-- Upcoming Features -->
+        <div class="rounded-2xl p-8 text-white"
+          style="background: linear-gradient(to bottom left, #26D97A, #21C070); text-shadow: 0px 1px 1px rgba(23, 110, 63, 0.5)">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-white/60 rounded-xl flex items-center justify-center text-2xl">
+              🍳
+            </div>
+            <h3 class="text-2xl font-bold ml-4">Always cooking</h3>
+          </div>
+          <p class="text-lg leading-relaxed mb-4">
+            Look forward to:
+          </p>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center space-x-2">
+              <span>🔁 Recurring expenses</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>🤑 Add income</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>💌 Automatic payment reminders</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>🏷️ Expense categories</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Perfect for any occasion</h2>
+        <p class="text-xl text-gray-600">From everyday moments to core memories, Divvy is here to help</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Roommates -->
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-blue-200 rounded-xl flex items-center justify-center text-2xl text-white">
+              🏠
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 ml-4">Roommates</h3>
+          </div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-4">
+            From basics to celebrations with your housemates. Keep track of who bought what and settle up effortlessly.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Rent</span>
+            <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Utilities</span>
+            <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Groceries</span>
+          </div>
+        </div>
+
+        <!-- Travelling -->
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-purple-200 rounded-xl flex items-center justify-center text-2xl text-white">
+              ✈️
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 ml-4">Travelling</h3>
+          </div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-4">
+            Planning a trip with friends? Track flights, hotels, meals, and activities. Handle any currency without
+            hassle.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Hotels</span>
+            <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Flights</span>
+            <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Meals</span>
+          </div>
+        </div>
+
+        <!-- Couples -->
+        <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 border border-pink-200">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-pink-200 rounded-xl flex items-center justify-center text-2xl text-white">
+              💕
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 ml-4">Couples</h3>
+          </div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-4">
+            Share both the small and big moments. Keep your relationship transparent about money.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Date nights</span>
+            <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Shared bills</span>
+            <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Vacations</span>
+          </div>
+        </div>
+
+        <!-- Colleagues -->
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-orange-200 rounded-xl flex items-center justify-center text-2xl text-white">
+              💼
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 ml-4">Colleagues</h3>
+          </div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-4">
+            Build your team and reach your goals. Divvy keeps an eye on the expenses.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Team lunches</span>
+            <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Office
+              supplies</span>
+            <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Conferences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready, set, split</h2>
+        <p class="text-xl text-primary-light mb-8">Download and sign up in seconds</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Download buttons and text -->
+        <div class="text-center lg:text-left">
+          <h3 class="text-2xl font-bold text-white mb-6">Get the app</h3>
+          <p class="text-primary-light mb-8">Available on iOS and Android. Free to download and use.</p>
+
+          <!-- Download Buttons -->
+          <div class="flex flex-row gap-4 justify-center lg:justify-start mb-8">
+            <a href="https://apps.apple.com/app/divvy/id1662002655"
+              class="inline-block hover:scale-105 transition-transform duration-200">
+              <img src="images/app-store.svg" alt="Download on the App Store" class="h-14 w-auto" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.totus_labs.divvy"
+              class="inline-block hover:scale-105 transition-transform duration-200">
+              <img src="images/play-store.svg" alt="Get it on Google Play" class="h-14 w-auto" />
+            </a>
+          </div>
+
+          <p class="text-sm text-primary-light">
+            🔒 Your data is secure and private
+          </p>
+        </div>
+
+        <!-- Right Column - QR Code -->
+        <div class="hidden lg:flex justify-center lg:justify-end">
+          <div class="bg-white rounded-2xl p-6 text-center max-w-sm w-full">
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Scan to download</h4>
+            <div class="mb-4 flex justify-center">
+              <img src="images/download-qr.svg" alt="Download QR Code" class="w-40 h-40" />
+            </div>
+            <p class="text-sm text-gray-600">
+              Point your phone's camera at the QR code
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+
+        <!-- Logo  -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start space-x-3 mb-2">
+            <img src="images/app-icon.svg" alt="Divvy" class="h-8 w-8" />
+            <div class="font-bold text-xl">Divvy</div>
+          </div>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="text-center">
+          <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <a href="/privacy" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+            <a href="/terms" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="text-center md:text-right">
+          <p class="text-gray-400 text-sm mb-3">Follow us</p>
+          <div class="flex justify-center md:justify-end space-x-4">
+            <a href="https://www.instagram.com/divvy.app" class="text-gray-400 hover:text-white transition-colors"
+              aria-label="Instagram">
+              <span class="sr-only">Instagram</span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-6">
+                <path
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd" fill-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@divvy.app" class="text-gray-400 hover:text-white transition-colors"
+              aria-label="TikTok">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/letsdivvy" class="text-gray-400 hover:text-white transition-colors"
+              aria-label="Facebook">
+              <span class="sr-only">Facebook</span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-6">
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd" fill-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function () {
+          const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+
+          if (isExpanded) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

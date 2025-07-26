@@ -1,0 +1,30 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "96JVKC97Z2.com.totus-labs.divvy"
+        ],
+        "components": [
+          {
+            "/": "/i/*",
+            "comment": "Matches invite short-hand URLs."
+          },
+          {
+            "/": "/invite/*",
+            "comment": "Matches invite URLs."
+          },
+          {
+            "/": "/auth/oidc/*/redirect",
+            "comment": "Matches OIDC authentication redirect URLs for any provider"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "96JVKC97Z2.com.totus-labs.divvy"
+    ]
+  }
+}
