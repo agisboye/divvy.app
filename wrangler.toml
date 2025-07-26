@@ -1,6 +1,7 @@
 name = "divvy-app"
 compatibility_date = "2025-07-26"
 send_metrics = false
+main = "./dist/worker/index.js"
 
 [assets]
 directory = "./dist"
