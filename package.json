@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npx wrangler pages functions build --outdir=./dist/worker/",
+    "build": "tsc && vite build --outDir ./dist/client/ && npx wrangler pages functions build --outdir=./dist/worker/",
     "preview": "vite preview"
   },
   "devDependencies": {
