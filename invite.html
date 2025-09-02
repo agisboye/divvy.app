@@ -3,16 +3,16 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="canonical" href="https://divvy.app/download" />
+  <link rel="canonical" href="https://divvy.app/invite" />
   <link rel="icon" type="image/svg+xml" href="/images/app-icon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download Divvy | Split when you're together</title>
+  <title>You're Invited to Divvy | Join your group</title>
   <meta name="description"
-    content="Download Divvy - the easiest way to share expenses with friends. Available on iOS and Android." />
+    content="You've been invited to join a group on Divvy - the easiest way to share expenses with friends. Download the app to get started." />
 </head>
 
 <body class="bg-gradient-to-br from-primary-light/20 to-primary-light/40 min-h-screen">
@@ -26,12 +26,14 @@
     </div>
   </header>
 
-  <!-- Main Download Section -->
+  <!-- Main Invite Section -->
   <main class="py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Download Divvy</h1>
-        <p class="text-xl text-gray-600 mb-8">Split expenses with friends. Available on iOS and Android.</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">You're Invited!</h1>
+        <p class="text-xl text-gray-600 mb-8 invite-message">Someone has invited you to join their group on Divvy to
+          split expenses.</p>
+        <div class="group-status"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -47,6 +49,41 @@
               class="inline-block hover:scale-105 transition-transform duration-200">
               <img src="/images/play-store.svg" alt="Get it on Google Play" class="h-14 w-auto" />
             </a>
+          </div>
+
+          <!-- Invite explanation -->
+          <div class="bg-green-50/80 backdrop-blur-sm rounded-lg p-6 border border-green-200/50">
+            <h3 class="text-lg font-semibold text-green-900 mb-2">What happens next?</h3>
+            <ol class="text-left text-green-800 space-y-2 text-sm">
+              <li class="flex items-start space-x-2">
+                <span class="font-semibold text-green-600">1.</span>
+                <span>Download the app and sign in</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="font-semibold text-green-600">2.</span>
+                <button onclick="window.location.href = window.location.href + '?opened=true'"
+                  class="text-green-600 underline hover:text-green-800 transition-colors cursor-pointer">
+                  Open invite
+                </button>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="font-semibold text-green-600">3.</span>
+                <span>Start splitting expenses with your friends!</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Universal link troubleshooting -->
+          <div id="invite-not-working" class="mt-8 flex max-w-xl" style="display: none;">
+            <div class="bg-gray-100 px-4 py-4 rounded-lg text-sm text-gray-800">
+              <h3 class="font-semibold">
+                Is the invite not working?
+              </h3>
+              <p>
+                If you've received the invite link in a chat app such as WhatsApp or Messenger, you may need to tap
+                "Open in external browser" or similar in the toolbar at the top or bottom.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -65,26 +102,26 @@
         </div>
       </div>
 
-      <!-- Additional Info -->
+      <!-- Group Features -->
       <div class="mt-16 text-center">
         <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Why choose Divvy?</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Perfect for groups</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div class="flex items-start space-x-3">
-              <span class="text-lg">✨</span>
-              <span class="text-gray-700">Easy expense splitting</span>
+              <span class="text-lg">👥</span>
+              <span class="text-gray-700">Create shared groups</span>
             </div>
             <div class="flex items-start space-x-3">
-              <span class="text-lg">💱</span>
-              <span class="text-gray-700">Multi-currency support</span>
+              <span class="text-lg">⚡</span>
+              <span class="text-gray-700">Real-time expense updates</span>
             </div>
             <div class="flex items-start space-x-3">
-              <span class="text-lg">📸</span>
-              <span class="text-gray-700">Receipt photo storage</span>
+              <span class="text-lg">🧮</span>
+              <span class="text-gray-700">Automatic split calculations</span>
             </div>
             <div class="flex items-start space-x-3">
-              <span class="text-lg">🤝</span>
-              <span class="text-gray-700">Smart settlement system</span>
+              <span class="text-lg">💸</span>
+              <span class="text-gray-700">Easy settlement tracking</span>
             </div>
           </div>
         </div>
@@ -106,6 +143,16 @@
   </footer>
 
   <script type="module" src="/src/main.ts"></script>
+  <script>
+    // Check if opened=true query parameter is present and show troubleshooting
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('opened') === 'true') {
+      const troubleshootingDiv = document.getElementById('invite-not-working');
+      if (troubleshootingDiv) {
+        troubleshootingDiv.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 
 </html>

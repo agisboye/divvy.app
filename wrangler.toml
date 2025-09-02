@@ -3,7 +3,10 @@ compatibility_date = "2025-07-26"
 send_metrics = false
 main = "./dist/worker/index.js"
 
+[build]
+command = "npm run build"
+
 [assets]
 directory = "./dist/client/"
 binding = "ASSETS"
-run_worker_first = ["/download*"]
+run_worker_first = ["/download*", "/invite*"]

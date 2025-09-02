@@ -4,18 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev:wrangler\" \"npm run dev:vite\" --names \"WRANGLER,VITE\" --prefix-colors \"orange,cyan\"",
+    "dev:vite": "vite",
+    "dev:wrangler": "npx wrangler dev --port 8787",
     "build": "tsc && vite build --outDir ./dist/client/ && npx wrangler pages functions build --outdir=./dist/worker/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "~5.8.3",
-    "vite": "^7.0.6",
-    "wrangler": "^4.26.0"
+    "concurrently": "^9.2.1",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.4",
+    "wrangler": "^4.33.2"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11"
+    "@tailwindcss/vite": "^4.1.12",
+    "tailwindcss": "^4.1.12"
   },
   "prettier": {
     "semi": false,
